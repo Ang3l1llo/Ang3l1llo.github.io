@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import '@fontsource-variable/onest';
 ---
 
@@ -12,28 +13,39 @@ import '@fontsource-variable/onest';
     <meta name="generator" content={Astro.generator} />
     <title>Portfolio de Ángel</title>
   </head>
-  <body>
-    <div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-    <div class="w-full max-w-[1120px] mx-auto">
+  <body class="flex flex-col min-h-screen text-white">
+
+    <div class="fixed inset-0 -z-10 w-full min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+
+    <!-- Header -->
+    <div class="w-full max-w-[1120px] mx-auto px-4">
       <Header />
+    </div>
+
+    <!-- Contenido principal -->
+    <main class="flex-grow w-full max-w-[1120px] mx-auto px-4">
       <slot />
+    </main>
+
+    <!-- Footer -->
+    <div class="w-full max-w-[1120px] mx-auto px-4">
+      <Footer />
     </div>
   </body>
 </html>
 
 <style is:global>
-  :root{
+  :root {
     color-scheme: light dark;
   }
-  html{
+
+  html {
     font-family: "Onest Variable", system-ui, sans-serif;
   }
-  body{
+
+  body {
     background: #050505;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-	scroll-behavior: smooth;
+    scroll-behavior: smooth;
   }
 </style>
 

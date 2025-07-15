@@ -1,17 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Social from '../components/Social.astro';
+import LinkedInIcon from '../icons/LinkedIn.astro';
+import GithubIcon from '../icons/Github.astro';
+import EmailIcon from '../icons/Email.astro';
 import "../styles/global.css";
 ---
 
 <Layout title="Contacto - Ángel">
-  <main class="w-full lg:w-[740px] mx-auto py-44 text-white">
-    <h1 class="text-white text-5xl font-bold flex justify-center flex-row gap-x-4 pb-10">Contacto</h1>
-    <p class="text-xl opacity-80 mb-4">
-      Puedes escribirme al correo:
-      <a
-        href="mailto:angelsanchezmendoz@gmail.com"
-        class="text-blue-400 underline"
-      >angelsanchezmendoz@gmail.com</a>
+  <main class="w-full lg:w-[740px] mx-auto py-44 text-white text-center">
+    <h1 class="text-5xl font-bold pb-6">Contacto</h1>
+    <p class="text-gray-300 text-xl mb-8">
+      Estoy abierto a nuevas oportunidades, proyectos o colaboraciones. Puedes contactarme a través de mis redes o por email.
     </p>
+
+    <nav class="flex gap-4 mt-8 justify-center flex-wrap">
+      <Social href="https://www.linkedin.com/in/angel-sanchez-mendoza-001586371/">
+        <LinkedInIcon class="size-6" />
+        LinkedIn
+      </Social>
+
+      <Social href="https://github.com/Ang3l1llo">
+        <GithubIcon class="size-6" />
+        GitHub
+      </Social>
+
+      <Social href="mailto:angelsanchezmendoz@gmail.com?subject=Contacto%20desde%20mi%20portfolio&body=Hola%20Ángel,%20quiero%20hablar%20contigo%20sobre...">
+        <EmailIcon class="size-6" />
+        angelsanchezmendoz@gmail.com
+      </Social>
+    </nav>
   </main>
 </Layout>
+
