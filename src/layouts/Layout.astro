@@ -18,9 +18,7 @@ import '@fontsource-variable/onest';
     <div class="fixed inset-0 -z-10 w-full min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
     <!-- Header -->
-    <div class="w-full max-w-[1120px] mx-auto px-4">
-      <Header />
-    </div>
+    <Header />
 
     <!-- Contenido principal -->
     <main class="flex-grow w-full max-w-[1120px] mx-auto px-4">
@@ -28,11 +26,11 @@ import '@fontsource-variable/onest';
     </main>
 
     <!-- Footer -->
-    <div class="w-full max-w-[1120px] mx-auto px-4">
-      <Footer />
-    </div>
+    <Footer />
+    
   </body>
 </html>
+
 
 <style is:global>
   :root {
@@ -41,6 +39,7 @@ import '@fontsource-variable/onest';
 
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
+    overflow-y: scroll;
   }
 
   body {
